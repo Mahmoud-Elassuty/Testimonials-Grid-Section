@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+:root {
+    --main1-color:hsl(263, 55%, 52%);
+    --main2-color:hsl(217, 19%, 35%);
+    --main3-color:hsl(0, 0%, 100%);
+    --background-color:hsl(0, 0%, 100%);
+    --text-color:hsl(214, 17%, 92%);
+    --border-color:hsl(264, 82%, 80%);
+    --text2-color:hsl(219, 29%, 14%);
+    
+}
+body {
+   background-color: hsl(210%, 46%, 95%);
+
+}
+.container {
+    margin: 10px 0 10px 0;
+}
+
+.container .cards {
+    padding: 20px 10px;
+    
+    margin: 10px 10px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 2px 5px 20px rgba(0, 0 ,0, 0.6)  ;
+}
+.container .cards.num1 {
+    background-color: var(--main1-color);
+}
+.container .cards.num2 {
+    background-color: var(--main2-color);
+}
+.container .cards.num3 .content ,
+.container .cards.num3 .image h4 ,
+.container .cards.num3 .image span  {
+   color: var(--text2-color);
+}
+.container .cards.num3 .content p {
+    color:hsl(224, 10%, 45%) ;
+}
+.container .cards.num4 {
+    background-color: var(--text2-color);
+}
+.container .cards.num5 {
+    background-color: var(--main3-color);
+}
+.container .cards.num5 .content,
+.container .cards.num5 .image h4 {
+    color: var(--text2-color);
+}
+.container .cards.num5 .image span , 
+.container .cards.num5 .content p{
+    color: hsl(224, 10%, 45%);
+}
+
+.container .image {
+    display: flex;
+    align-items: center;
+    /* margin-bottom: 10px; */
+}
+ .container .cards .image span {
+    font-size: 14px;
+    color: hsl(0, 0%, 81%);
+    font-family: "Barlow Semi Condensed", sans-serif;
+    position: relative;
+    z-index: 2;
+}
+ .container .cards .image h4 {
+    color: var(--main3-color);
+    font-family: "Barlow Semi Condensed", sans-serif;
+    position: relative;
+        z-index: 2;
+ }
+.container .image img {
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 2px solid var(--border-color);
+    margin-left: 20px;
+}
+.container .cards .content  {
+    padding: 20px;
+    color: var(--main3-color);
+}
+.container .cards .content h4 {
+    margin-bottom: 20px;
+    font-size: 19px;
+   width: 90%;
+    font-weight: 800;
+    line-height: 1.3;
+    z-index: 2;
+    position: relative;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+.container .cards .content p {
+    line-height: 1.3;
+   color: var(--text-color);
+   font-weight: 400;
+font-family: "Barlow Semi Condensed", sans-serif;
+}
+.container .cards .quets img {
+    position: absolute;
+    right: 50px;
+    top: 0;
+    z-index: 1;
+
+}
+@media (min-width:640px ){
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       gap: 15px;
+       margin: 30px;
+    }
+}
+@media (min-width:1280px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 1200px;
+        margin: 220px auto;
+    }
+    .container .cards.num1 {
+        grid-column: 1/3;
+    }
+        .container .cards.num5 {
+        grid-column: 4;
+        grid-row: 1/3;
+        }
+         .container .cards.num4 {
+        grid-column: 2/4;
+         }
+}
