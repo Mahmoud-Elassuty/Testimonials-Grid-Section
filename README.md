@@ -1,2 +1,2 @@
 # Testimonials-Grid-Section
-Testimonials Grid Section with html &amp; css
+Testimonials Grid Section  Challenge on Frontend mentor by html & Css ;
